@@ -1,3 +1,5 @@
+
+
 function validate() {    
     var fname = document.reg_form.fname;    
     var lname = document.reg_form.lname;    
@@ -12,35 +14,38 @@ function validate() {
         fname.focus();    
         return false;    
     }    
-    if (lname.value.length <= 0) {    
+    else if (lname.value.length <= 0) {    
         alert("Last Name is required");    
         lname.focus();    
         return false;    
     }    
-    if (passw.value.length <=7){
+    else if (passw.value.length <=7){
         alert("Password is too Small")
         passw.focus();
         return false;
     }
-    if (username.value.length <= 0) {    
+    else if (username.value.length <= 0) {    
         alert("Address is required");    
         address.focus();    
         return false;    
     }    
-    if (gender.value.length <= 0) {    
+    else if (gender.value.length <= 0) {    
         alert("Gender is required");    
         gender.focus();    
         return false;    
     }    
-    if (email.value.length <= 0) {    
+    else if (email.value.length <= 0) {    
         alert("Email Id is required");    
         email.focus();    
         return false;    
     }       
-    if (role.value == "select Role") {    
+    else if (role.value == "select Role") {    
         alert("Role is required");    
         course.focus();    
         return false;    
     }    
-    return false;    
+    else{
+        alert('Registered successfully')
+        window.location.href = '/login.html'
+    }  
 }    
