@@ -43,9 +43,7 @@ localStorage.setItem('mohini', JSON.stringify(mohini));
 localStorage.setItem('ashwin', JSON.stringify(ashwin));
 localStorage.setItem('aman', JSON.stringify(aman));
 localStorage.setItem('abhishek', JSON.stringify(abhishek));
-localStorage.setItem('shivani', JSON.stringify(shivani));
-
-
+localStorage.setItem('shivani',JSON.stringify(shivani))
 
 
 
