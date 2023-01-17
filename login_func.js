@@ -31,10 +31,20 @@ let mohini = {
     'gender':'Female',
     'role':'Operation'
 }
+let shivani = {
+    'email': 'shiv@gmail.com',
+    'password': 'shivani',
+    'firstname':'Shivani',
+    'lastname':'Yadav',
+    'gender':'Female',
+    'role':'Admin'
+}
 localStorage.setItem('mohini', JSON.stringify(mohini));
 localStorage.setItem('ashwin', JSON.stringify(ashwin));
 localStorage.setItem('aman', JSON.stringify(aman));
 localStorage.setItem('abhishek', JSON.stringify(abhishek));
+localStorage.setItem('shivani', JSON.stringify(shivani));
+
 
 
 
