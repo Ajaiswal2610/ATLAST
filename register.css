@@ -1,3 +1,5 @@
+
+
 body{    
     font-family: Calibri;  
     margin: 0px;
@@ -5,9 +7,11 @@ body{
     text-align:center;
     width: 100%;
     background-color: #e6e6fae8;  
-}    
+}  
+
 input[type="text"] {    
     width: 250px;    
+
 }    
 input[type="submit"], input[type="reset"] {    
     width: 77px;    
