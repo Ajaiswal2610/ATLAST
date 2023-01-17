@@ -5,8 +5,7 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login and Registration form example</title>
- 
-<link rel="stylesheet" type="text/css" href="login.css">
+
  
 </head>
  
@@ -15,7 +14,7 @@
         <h1>Registration Form</h1>
     </center> -->
 <div id="container">
-<form action="login" method="post" id="flogin">
+<form name="form-login">
  
 <div class="border-box">
 <h2>Login Form</h2>
@@ -23,23 +22,49 @@
     <tr>
         <td><label>Username: </label></td>
         <td>
-            <input type="text" name="username" placeholder="User Name">
+            <input type="text" id="username" name="username" placeholder="User Name">
         </td>
     </tr>
     <tr>
         <td><label> Password: </label></td>
         <td>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" id = "password" name="password" placeholder="Password">
         </td>
     </tr>
 </table>
  
-<button type="submit" value="Login"  id="submit" onClick="alert('Login Successfully')">Login</button>
+<button type="button" value="Login" id ="login-button">Login</button>
  
 <a href="register.html">New Member</a>
+
+
 </div>
 </form>
+
 </div>
- 
-</body>
+
+<div id="container-table">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Gender</th>
+          </tr>
+        </thead>
+
+        <tbody id = 'tableBody'>
+           
+           
+          </tbody>
+        </table>
+    
+</div>
+
+<script src="func.js"></script>
+<link rel="stylesheet" type="text/css" href="login.css">
+
 </html>
