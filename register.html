@@ -5,7 +5,7 @@
     <title>Reg Form</title>
 </head>
 <link rel="stylesheet" type="text/css" href="register.css">
-<body>
+<body class="bodyclass">
     <!-- <center>
         <h1>Registration Form</h1>
     </center> -->
@@ -47,13 +47,13 @@
             <tr>
                 <td><label>Email Id: </label></td>
                 <td>
-                    <input type="text" name="email" placeholder="example@gmail.com">
+                    <input type="email" name="email" placeholder="example@gmail.com">
                 </td>
             </tr>
             <tr>
                 <td><label>Role: </label></td>
                 <td>
-                    <select name="role">
+                    <select name="role" required>
                         <option value="select course">select Role</option>
                         <option value="Sales">Sales</option>
                         <option value="Admin">Admin</option>
