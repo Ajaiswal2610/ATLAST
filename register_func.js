@@ -1,5 +1,13 @@
 
-
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
 function validate() {    
     var fname = document.reg_form.fname.value;    
     var lname = document.reg_form.lname.value;    
@@ -34,12 +42,11 @@ function validate() {
         gender.focus();    
         return false;    
     }    
-    else if (email.length <= 0) {    
-        alert("Email Id is required");    
+    else if(!ValidateEmail(email)) {    
         email.focus();    
         return false;    
     }       
-    else if (role== "select Role") {    
+    else if (role== "select role") {    
         alert("Role is required");    
         course.focus();    
         return false;    
