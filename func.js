@@ -1,3 +1,4 @@
+document.getElementById('container-table').style.display = 'none';
 
 
 function validate() {    
@@ -68,7 +69,8 @@ function validate() {
 function listusers(role){
     // populate the user details 
     str = ""
-    let tableBody = document.getElementById("tableBody");
+    document.getElementById('container').style.display = 'none';
+    document.getElementById('container-table').style.display = 'block';
 
     for (x in localStorage){
         let username = x;
