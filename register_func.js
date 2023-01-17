@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 function ValidateEmail(mail) 
 {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
@@ -37,6 +44,13 @@ function validate() {
         address.focus();    
         return false;    
     }    
+    else if (JSON.parse(localStorage.getItem(username)!=null)
+    ) {
+        alert("Username already used");
+        username.focus();
+        return false;
+
+    }
     else if (gender.length <= 0) {    
         alert("Gender is required");    
         gender.focus();    

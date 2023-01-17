@@ -1,3 +1,44 @@
+let abhishek = {
+    'email': 'abhishek@gmail.com',
+    'password': 'abhishek',
+    'firstname':'Abhishek',
+    'lastname':'Jaiswal',
+    'gender':'Male',
+    'role':'Admin'
+};
+let aman = {
+    'email': 'aman@gmail.com',
+    'password': 'aman',
+    'firstname':'Aman',
+    'lastname':'Yadav',
+    'gender':'Male',
+    'role':'Sales'
+}
+let ashwin = {
+    'email': 'ashwin@gmail.com',
+    'password': 'ashwin',
+    'firstname':'Ashwin',
+    'lastname':'Yadav',
+    'gender':'Female',
+    'role':'Operation'
+}
+
+let mohini = {
+    'email': 'mohin@gmail.com',
+    'password': 'mohini',
+    'firstname':'Mohini',
+    'lastname':'Yadav',
+    'gender':'Female',
+    'role':'Operation'
+}
+localStorage.setItem('mohini', JSON.stringify(mohini));
+localStorage.setItem('ashwin', JSON.stringify(ashwin));
+localStorage.setItem('aman', JSON.stringify(aman));
+localStorage.setItem('abhishek', JSON.stringify(abhishek));
+
+
+
+
 
 function listusers(role){
     // populate the user details 
