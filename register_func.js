@@ -16,51 +16,51 @@ function ValidateEmail(mail)
     return (false)
 }
 function validate() {    
-    var fname = document.reg_form.fname.value;    
-    var lname = document.reg_form.lname.value;    
-    var username = document.reg_form.username.value;  
-    var passw = document.reg_form.password.value;  
-    var gender = document.reg_form.gender.value;    
-    var email = document.reg_form.email.value;    
-    var role = document.reg_form.role.value;    
+    var fname = document.reg_form.fname;    
+    var lname = document.reg_form.lname;    
+    var username = document.reg_form.username;  
+    var passw = document.reg_form.password;  
+    var gender = document.reg_form.gender;    
+    var email = document.reg_form.email;    
+    var role = document.reg_form.role;    
 
-    if (fname.length <= 0) {    
+    if (fname.value.length <= 0) {    
         alert("Name is required");    
         fname.focus();    
         return false;    
     }    
-    else if (lname.length <= 0) {    
+    else if (lname.value.length <= 0) {    
         alert("Last Name is required");    
         lname.focus();    
         return false;    
     }    
-    else if (passw.length <=7){
+    else if (passw.value.length <=7){
         alert("Password is too Small")
         passw.focus();
         return false;
     }
-    else if (username.length <= 0) {    
+    else if (username.value.length <= 0) {    
         alert("Address is required");    
         address.focus();    
         return false;    
     }    
-    else if (JSON.parse(localStorage.getItem(username)!=null)
+    else if (JSON.parse(localStorage.getItem(username.value)!=null)
     ) {
         alert("Username already used");
         username.focus();
         return false;
 
     }
-    else if (gender.length <= 0) {    
+    else if (gender.value.length <= 0) {    
         alert("Gender is required");    
         gender.focus();    
         return false;    
     }    
-    else if(!ValidateEmail(email)) {    
+    else if(!ValidateEmail(email.value)) {    
         email.focus();    
         return false;    
     }       
-    else if (role== "select role") {    
+    else if (role.value== "select role") {    
         alert("Role is required");    
         course.focus();    
         return false;    
@@ -68,16 +68,16 @@ function validate() {
     else{
 
         var userdetail = {
-            'email': email,
-            'password': passw,
-            'firstname':fname,
-            'lastname':lname,
-            'gender':gender,
-            'role':role
+            'email': email.value,
+            'password': passw.value,
+            'firstname':fname.value,
+            'lastname':lname.value,
+            'gender':gender.value,
+            'role':role.value
 
         };
         
-        localStorage.setItem(username, JSON.stringify(userdetail));
+        localStorage.setItem(username.value, JSON.stringify(userdetail));
         
         
 
