@@ -23,6 +23,14 @@ let ashwin = {
     'role':'Operation'
 }
 
+let admin = {
+    'email': 'admin@yahoo.com',
+    'password': 'admin',
+    'firstname':'admin',
+    'lastname':'admin',
+    'gender':'Female',
+    'role':'Admin'
+}
 let mohini = {
     'email': 'mohin@gmail.com',
     'password': 'mohini',
@@ -39,6 +47,7 @@ let shivani = {
     'gender':'Female',
     'role':'Admin'
 }
+localStorage.setItem('admin', JSON.stringify(admin));
 localStorage.setItem('mohini', JSON.stringify(mohini));
 localStorage.setItem('ashwin', JSON.stringify(ashwin));
 localStorage.setItem('aman', JSON.stringify(aman));
@@ -53,6 +62,7 @@ function listusers(role){
     str = ""
     document.getElementById('container').style.display = 'none';
     document.getElementById('container-table').style.display = 'block';
+    document.getElementsByClassName('para')[0].innerHTML = `List of ${role} Users`;
     let srn = 1;
     for (x in localStorage){
         let username = x;
