@@ -27,7 +27,7 @@ td {
 }    
 td:first-child {    
     text-align: right;    
-    font-weight: bold;    
+    /* font-weight: bold;     */
 }    
 td:last-child {    
     text-align: left;    

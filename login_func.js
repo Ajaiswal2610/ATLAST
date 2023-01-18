@@ -53,13 +53,14 @@ function listusers(role){
     str = ""
     document.getElementById('container').style.display = 'none';
     document.getElementById('container-table').style.display = 'block';
-
+    let srn = 1;
     for (x in localStorage){
         let username = x;
         let userFromLocalStorage = JSON.parse(localStorage.getItem(username));
         if (userFromLocalStorage != null && userFromLocalStorage.role == role){
             str += `
         <tr>
+        <td>${srn}</td>
         <td>${userFromLocalStorage.firstname}</td>
         <td>${userFromLocalStorage.lastname}</td> 
         <td>${username}</td>
@@ -68,6 +69,8 @@ function listusers(role){
         <td>${userFromLocalStorage.gender}</td>
         </tr>`; 
         tableBody.innerHTML = str;
+        srn = srn+1;
+
         }
         
 
